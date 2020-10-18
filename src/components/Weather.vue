@@ -242,6 +242,7 @@ export default {
             weathers:[],
             intervalId:0,
             count:0,
+            API_KEY:process.env.VUE_APP_WKEY
             
         }
     },
@@ -256,10 +257,12 @@ export default {
 
     created(){
 // Get update weather info after every 5 minutes
+//console.log(process.env.VUE_APP_WKEY);
 this.intervalId= setInterval(() => {
         this.getWeather(); 
-        this.count+=1;
-        console.log ("Weather Updated");
+       // this.count+=1;
+        //console.log(API_KEY); 
+        //console.log ("Weather Updated");
     }, 300000);
     
     },
@@ -268,7 +271,7 @@ this.intervalId= setInterval(() => {
     methods:{
     loadWeather:function(location){
       //load the weather through the weather
-     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=8d43970cf0592c7dc5e0451106185007`)
+     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${this.API_KEY}`)
             .then(response =>response.json())
             .then(weatherData=>{console.log(weatherData);this.weathers.push(weatherData)})           
             .catch(error=>console.log("Error:"+error));
