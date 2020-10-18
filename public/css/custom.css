@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  
+ background: linear-gradient(to right, rgba(0, 0, 0, 0.4),  rgba(0, 0, 0, 0.2)), url('/images/flat-mountains.svg');
+ background-size: cover;
+ background-attachment: fixed;
+}
