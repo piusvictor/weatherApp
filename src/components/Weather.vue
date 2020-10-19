@@ -71,7 +71,7 @@
          <div class="box card-p1 rounded" style="position: relative;">
             <p class="text-light text-center mt-2"><img src="/images/pressure.png" alt=""  style="width:40px;margin-left:20%"></p>
 
-            <p class="text-light text-center" v-if="weathers.length>0">{{weathers[0].wind.speed}}hpa</p>
+            <p class="text-light text-center" v-if="weathers.length>0">{{weathers[0].main.pressure}}hpa</p>
              <p class="text-light text-center" v-else>Loading...</p>
             <div style="position: absolute;bottom:-27px;left:15%">
               <span class="text-light">Pressure</span>
@@ -131,7 +131,7 @@
          <div class="box card-p1 rounded" style="position: relative;">
             <p class="text-light text-center mt-2"><img src="/images/pressure.png" alt=""  style="width:40px;margin-left:20%"></p>
 
-            <p class="text-light text-center" v-if="weathers.length>0">{{weathers[1].wind.speed}}hpa</p>
+            <p class="text-light text-center" v-if="weathers.length>0">{{weathers[1].main.pressure}}hpa</p>
              <p class="text-light text-center" v-else>Loading...</p>
             <div style="position: absolute;bottom:-27px;left:15%">
               <span class="text-light">Pressure</span>
@@ -190,7 +190,7 @@
          <div class="box card-p1 rounded" style="position: relative;">
             <p class="text-light text-center mt-2"><img src="/images/pressure.png" alt=""  style="width:40px;margin-left:20%"></p>
 
-            <p class="text-light text-center" v-if="weathers.length>0">{{weathers[2].wind.speed}}hpa</p>
+            <p class="text-light text-center" v-if="weathers.length>0">{{weathers[2].main.pressure}}hpa</p>
              <p class="text-light text-center" v-else>Loading...</p>
             <div style="position: absolute;bottom:-27px;left:15%">
               <span class="text-light">Pressure</span>
